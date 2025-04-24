@@ -7,7 +7,7 @@ import seaborn as sns
 def main():
     # Read the TSV data
     print("Loading data...")
-    df = pd.read_csv('final_haunted_places.tsv', sep='\t')
+    df = pd.read_csv('../data/final_haunted_places.tsv', sep='\t')
 
 import pandas as pd
 import json
