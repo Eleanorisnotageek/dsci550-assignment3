@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>State Haunted Places Treemap</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    .node {
+      position: absolute;
+      text-align: center;
+      overflow: hidden;
+    }
+    .tooltip {
+      position: absolute;
+      text-align: center;
+      padding: 5px;
+      font: 12px sans-serif;
+      background: lightgray;
+      border: 0px;
+      border-radius: 4px;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+<h2 style="text-align:center;">State Haunted Places Treemap</h2>
+<div id="treemap"></div>
+<script>
+const width = 960, height = 600;
+
+const svg = d3.select("#treemap")
+  .append("svg")
+  .attr("width", width)
+  .attr("height", height);
+
+const tooltip = d3.select("body")
+  .append("div")
+  .attr("class", "tooltip")
+  .style("opacity", 0);
+
+d3.json("../data/json/state_counts.json").then(data => {
+  const root = d3.hierarchy({ children: data })
+    .sum(d => d.count);
+
+  d3.treemap()
+    .size([width, height])
+    .padding(2)
+    (root);
+
+  const color = d3.scaleOrdinal(d3.schemeCategory10);
+
+  const nodes = svg.selectAll("g")
+    .data(root.leaves())
+    .enter()
+    .append("g")
+    .attr("transform", d => `translate(${d.x0},${d.y0})`);
+
+  nodes.append("rect")
+    .attr("width", d => d.x1 - d.x0)
+    .attr("height", d => d.y1 - d.y0)
+    .attr("fill", d => color(d.data.state))
+    .on("mouseover", (event, d) => {
+      tooltip.transition().duration(200).style("opacity", 0.9);
+      tooltip.html(`${d.data.state}: ${d.data.count}`)
+        .style("left", (event.pageX + 10) + "px")
+        .style("top", (event.pageY - 20) + "px");
+    })
+    .on("mouseout", () => {
+      tooltip.transition().duration(500).style("opacity", 0);
+    });
+
+  nodes.append("text")
+    .attr("x", 4)
+    .attr("y", 14)
+    .text(d => {
+      if ((d.x1 - d.x0) > 60 && (d.y1 - d.y0) > 20) {
+        return `${d.data.state}: ${d.data.count}`;
+      }
+      return ""; // 小块不要写字，防止太挤
+    })
+    .style("font-size", "12px")
+    .style("fill", "black");
+});
+</script>
+</body>
+</html>
