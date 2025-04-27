@@ -8,7 +8,7 @@ output_dir = '../data/json'
 os.makedirs(output_dir, exist_ok=True)
 
 
-df = pd.read_csv('/root/dsci 550 assignment 3/dsci550-assignment3/final_haunted_places.tsv', sep='\t')
+df = pd.read_csv('/root/dsci550-assignment3/final_haunted_places.tsv', sep='\t')
 
 
 
@@ -40,4 +40,4 @@ time_data = [{'time': time, 'count': count} for time, count in time_counts.most_
 with open(os.path.join(output_dir, 'time_of_day_counts.json'), 'w') as f:
     json.dump(time_data, f, indent=2)
 
-print('✅ All JSON files have been generated successfully!')
+print('All JSON files have been generated successfully!')
