@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test D3.js with Solr</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+<body>
+    <h1>Haunted Places Data from Solr</h1>
+    <div id="haunted-places"></div>
+
+    <script>
+        d3.json("http://localhost:8983/solr/assignment3/select?q=*:*&rows=10")
+          .then(function(data) {
+            console.log("Fetched Solr data:", data);
+        
+            var documents = data.response.docs;
+            console.log("Documents array:", documents);
+        
+            if (!documents || documents.length === 0) {
+              console.error("No documents found!");
+              return;
+            }
+        
+            d3.select("#haunted-places")
+              .selectAll("p")
+              .data(documents)
+              .enter()
+              .append("p")
+              .text(function(d) {
+                  return (d.city && d.city.length > 0 ? d.city[0] : "Unknown City") + 
+                         " — " + (d.country && d.country.length > 0 ? d.country[0] : "Unknown Country") + 
+                         " — " + (d.description && d.description.length > 0 ? d.description[0] : "No description");
+              });
+          })
+          .catch(function(error) {
+            console.error('Error loading the data:', error);
+          });
+        </script>
+        
+</body>
+</html>
