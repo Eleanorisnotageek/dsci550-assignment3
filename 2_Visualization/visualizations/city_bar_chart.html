@@ -18,7 +18,7 @@
 <div id="bar-chart"></div>
 <script>
 const svg = d3.select("#bar-chart").append("svg")
-      .attr("width", 1400)  // 💥 加宽！
+      .attr("width", 1400)  
       .attr("height", 600),
       margin = {top: 50, right: 30, bottom: 150, left: 60},
       width = +svg.attr("width") - margin.left - margin.right,
@@ -34,7 +34,7 @@ d3.json("../data/json/city_counts.json").then(data => {
     .attr("transform", `translate(0,${height})`)
     .call(d3.axisBottom(x))
     .selectAll("text")
-    .style("font-size", "10px")  // 💥 字体变小
+    .style("font-size", "10px")  
     .attr("transform", "rotate(-45)")
     .style("text-anchor", "end");
 
