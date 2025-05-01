@@ -1,0 +1,30 @@
+[
+  {
+    "time_of_day": "Night",
+    "count": 3480
+  },
+  {
+    "time_of_day": "Unknown",
+    "count": 7002
+  },
+  {
+    "time_of_day": "Morning",
+    "count": 337
+  },
+  {
+    "time_of_day": "Afternoon",
+    "count": 49
+  },
+  {
+    "time_of_day": "Evening",
+    "count": 145
+  },
+  {
+    "time_of_day": "Noon",
+    "count": 1
+  },
+  {
+    "time_of_day": "Midnight",
+    "count": 2
+  }
+]
