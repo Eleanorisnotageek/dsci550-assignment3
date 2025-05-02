@@ -1,0 +1,16 @@
+# Ignore the image_space folder
+image_space/
+
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore environment files (if using virtualenv)
+.env/
+venv/
