@@ -23,16 +23,29 @@ This project builds upon our earlier assignments involving haunted places by cre
 ---
 
 ## Division of Work
----
-•	Sidney and Eleanor
-Handled TSV-to-JSON conversion and developed all five D3 visualizations to highlight insights from Assignments 1 and 2.
-•	Aaron and Maggie
-Installed and configured ImageSpace, Solr, and ImageCat, and attempted integration of SMQTK for visual similarity search.
-•	Jessica and Tarun
-Processed unstructured text using GeoTopicParser and SpaCy to extract geographic references. They also led the overall project integration and compiled the final report.
 
-All team members actively contributed to data preparation, debugging, and the final report writing process.
-
+1.	**D3 Visualizations & TSV-to-JSON Conversion (Sidney, Eleanor)**
+	-Transformed TSV data into JSON format for visualization
+	-Developed five D3 visualizations reflecting insights from Assignments 1 and 2
+	-Designed interactive charts for city, state, event, time, and treemap views
+	-Integrated JSON datasets with frontend components
+	-Tuned visualization parameters for clarity and storytelling
+2.	**Image Tools Setup & Visual Similarity Integration (Aaron, Maggie)**
+	-Installed and configured ImageSpace, Solr, and ImageCat
+	-Ingested haunted place image data for indexing and similarity search
+	-Attempted integration of SMQTK for image-based visual similarity
+	-Verified Solr index integrity and search functionalities
+	-Explored forensic image insights via ImageSpace interface
+3.	**Geographic Entity Extraction & Final Integration (Jessica, Tarun)**
+	-Applied GeoTopicParser to extract geographic references from text
+	-Used SpaCy for named entity recognition and categorization
+	-Analyzed spatial distribution and correlations across locations
+	-Led integration of GeoParser outputs into the final dataset
+	-Coordinated report writing and project documentation
+4.	**Data Preparation, Debugging & Reporting (All Members)**
+	-Collaboratively cleaned, formatted, and validated all datasets
+	-Troubleshot Docker services, JSON pipelines, and visualization bugs
+	-Reviewed and edited the final report for consistency and clarity
 ---
 
 ## Technologies Used
