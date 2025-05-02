@@ -51,35 +51,35 @@ This project builds upon our earlier assignments involving haunted places by cre
 ## Technologies Used
 
 ### Web & Data Visualization
-	•	D3.js: Data-driven visualizations
-	•	HTML/CSS/JavaScript: Frontend structure
-	•	Python: Data preprocessing scripts
-	•	Apache Solr / Elasticsearch: Search indexing and querying
+- D3.js: Data-driven visualizations
+- HTML/CSS/JavaScript: Frontend structure
+- Python: Data preprocessing scripts
+- Apache Solr / Elasticsearch: Search indexing and querying
 
 ### Image & Text Analysis
-	•	MEMEX Image Space: Image indexing and similarity search
-	•	MEMEX GeoParser: Location extraction and mapping
-	•	Apache Tika: Text and image metadata extraction
-	•	Tika-Python: Used for ingestion scripts
+- MEMEX Image Space: Image indexing and similarity search
+- MEMEX GeoParser: Location extraction and mapping
+- Apache Tika: Text and image metadata extraction
+- Tika-Python: Used for ingestion scripts
 
 ---
 
 ## Visualizations Implemented
-	1.	State-Level Bar Chart – Distribution of haunted sightings by U.S. state
-	2.	City-Level Bar Chart – City-wise breakdown of haunting entries
-	3.	Pie Chart of Event Types – Summarized haunting themes from descriptions
-	4.	Donut Chart for Time Analysis – Temporal patterns of sightings
-	5.	Treemap – Nested regional breakdown of haunting density
+1.	State-Level Bar Chart – Distribution of haunted sightings by U.S. state
+2.	City-Level Bar Chart – City-wise breakdown of haunting entries
+3.	Pie Chart of Event Types – Summarized haunting themes from descriptions
+4.	Donut Chart for Time Analysis – Temporal patterns of sightings
+5.	Treemap – Nested regional breakdown of haunting density
 
 ---
 
 ## Getting Started
 
 ### Prerequisites
-	•	Python 3.8+
-	•	Node.js (for running local web server if needed)
-	•	Docker (for GeoParser and ImageSpace setup)
-	•	Apache Solr or Elasticsearch (Docker preferred)
+- Python 3.8+
+- Node.js (for running local web server if needed)
+- Docker (for GeoParser and ImageSpace setup)
+- Apache Solr or Elasticsearch (Docker preferred)
 
 ### Setup Instructions
 
@@ -105,16 +105,16 @@ Follow: https://github.com/nasa-jpl-memex/image_space/wiki/Quick-Start-Guide-wit
 ## Insights and Analysis
 
 ### Geographic Patterns
-	•	Notable clusters of haunted place sightings were seen in cities like Los Angeles, San Antonio, and Columbus.
-	•	MEMEX GeoParser revealed unexpected non-U.S. locations in generated data, not present in the original dataset.
+- Notable clusters of haunted place sightings were seen in cities like Los Angeles, San Antonio, and Columbus.
+- MEMEX GeoParser revealed unexpected non-U.S. locations in generated data, not present in the original dataset.
 
 ### Image Similarity
-	•	Image Space helped identify visually similar haunted scenes that weren’t obviously related via text.
-	•	Visual clusters revealed recurring themes (e.g., abandoned houses, shadowy forests).
+- Image Space helped identify visually similar haunted scenes that weren’t obviously related via text.
+- Visual clusters revealed recurring themes (e.g., abandoned houses, shadowy forests).
 
 ### Tool Observations
-	•	ImageCat/Image Space: Easy setup via Docker; ingestion with Tika required minor preprocessing
-	•	GeoParser: Setup was more involved, but visual output provided strong spatial insights
+- ImageCat/Image Space: Easy setup via Docker; ingestion with Tika required minor preprocessing
+- GeoParser: Setup was more involved, but visual output provided strong spatial insights
 
 ---
 
