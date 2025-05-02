@@ -83,21 +83,22 @@ This project builds upon our earlier assignments involving haunted places by cre
 
 ### Setup Instructions
 
-##### Clone the repository
+```bash
+# Clone the repository
 git clone https://github.com/Eleanorisnotageek/dsci550-assignment3.git
 
-#### Install required Python packages
+# Install required Python packages
 pip install -r requirements.txt
 
-#### Start local web server for D3 visualizations (optional)
+# Start local web server for D3 visualizations (optional)
 python3 -m http.server 8000
 
-#### Set up GeoParser
+# Set up GeoParser
 Follow: https://github.com/nasa-jpl-memex/GeoParser
 
-#### Set up Image Space
+# Set up Image Space
 Follow: https://github.com/nasa-jpl-memex/image_space/wiki/Quick-Start-Guide-with-ImageCat
-
+```
 
 
 ---
