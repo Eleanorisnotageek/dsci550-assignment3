@@ -14,11 +14,11 @@ This project builds upon our earlier assignments involving haunted places by cre
 ## Key Achievements
 ---
 
-•	D3 Visualizations: Designed and deployed 5 unique visualizations based on assignment 1 and 2 insights
-•	Location Analytics: Integrated MEMEX GeoParser to extract and map location mentions from haunted place descriptions
-•	Image Similarity Search: Deployed MEMEX Image Space for interactive exploration of AI-generated haunted location images
-•	Data Aggregation Pipeline: Transformed TSV data to JSON for use in D3, Apache Solr, and Elasticsearch
-•	Web Deployment: Hosted the final website for user interaction via a centralized landing page
+- D3 Visualizations: Designed and deployed 5 unique visualizations based on assignment 1 and 2 insights
+- Location Analytics: Integrated MEMEX GeoParser to extract and map location mentions from haunted place descriptions
+- Image Similarity Search: Deployed MEMEX Image Space for interactive exploration of AI-generated haunted location images
+- Data Aggregation Pipeline: Transformed TSV data to JSON for use in D3, Apache Solr, and Elasticsearch
+- Web Deployment: Hosted the final website for user interaction via a centralized landing page
 
 ---
 
