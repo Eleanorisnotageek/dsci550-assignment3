@@ -1,7 +1,3 @@
-Here is a README.md tailored for your GitHub repository based on the assignment description in the PDF and modeled after the style you provided:
-
-⸻
-
 DSCI550 Large Scale Web Data Visualization: Haunted Places
 
 Repository for DSCI 550 Group 02
